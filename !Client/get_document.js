@@ -1,0 +1,2 @@
+
+//setupDocDownload('downloadDocBtn', documentHost);

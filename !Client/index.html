@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Управление сотрудниками и отделами</title>
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'; this.onload=null;">
+  <script src="script.js"></script>
+  <script src="functions.js"></script>
+</head>
+<body>
+  <div class="nav">
+    <button data-action="add" id="employeesBtn">Добавить сотрудника</button>
+    <button data-action="employees" id="departmentsBtn">Сотрудники</button>
+    <button data-action="departments">Отделы</button>
+
+  </div>
+
+  <section id="employeesSection">
+    <h2>Сотрудники</h2>
+    <label>Отдел:
+      <select id="deptSelect"></select>
+    </label>
+    <table>
+      <thead>
+        <tr>
+          <th>Фото</th>
+          <th>ФИО</th>
+          <th>Статус</th>
+          <th>Зарплата</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody id="employeeList"></tbody>
+    </table>
+    <div id="empWarning" class="warning"></div>
+  </section>
+
+  <section id="departmentsSection" class="hidden">
+    <h2>Отделы</h2>
+    <table>
+      <thead>
+        <tr><th>Отдел</th><th>Руководитель</th><th>ЗП по Отделу</th><th>Размер</th><th>Действия</th></tr>
+      </thead>
+      <tbody id="departmentList"></tbody>
+    </table>
+  </section>
+
+  <section id="addSection" class="hidden">
+    <h2>Добавить сотрудника</h2>
+    <form id="addForm">
+      <input type="text" id="newStatus" placeholder="Статус" required>
+      <input type="text" id="newName" placeholder="Имя" required>
+      <input type="number" id="newSalary" placeholder="Зарплата" required>
+      <input type="file" id="newImage" title="Загрузить фото" accept="image/*">
+      <div id="fileButton">
+        <button type="button" id="customFileBtn">Загрузить фото</button>
+        <span id="fileName">Файл не выбран</span>
+      </div>
+      <img src="" id="clipboardimg">
+      <select id="newDept" required></select>
+      <button class="addBtns" id="addBtn" type="submit">Добавить</button>
+      <button class="addBtns" id="addBtnCancel" type="button">Отменить</button>
+    </form>
+    <div id="addError" class="error"></div>
+    <div id="addWarning" class="warning">
+  </section>
+</body>
+</html>

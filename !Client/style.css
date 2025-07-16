@@ -1,0 +1,236 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  padding: 20px;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5%;
+  color: #2c3e50;
+}
+button {
+  background-color: #3498db;
+  height:70%;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Сообщения */
+.warning {
+  color: #eca115 !important;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.error {
+  color: #e74c3c !important;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Скрытые секции */
+.hidden { display: none; }
+
+/* Карточки секций */
+section {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1% 2%;
+  border-radius: 8px;
+  box-shadow: 1px -2px 5px rgba(13, 86, 155,0.2);
+  margin-bottom: 20px;
+}
+
+img {
+  width:80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+
+
+/* Навигация */
+.nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 7px;
+  height: 70px;
+  width: 80%;
+  gap: 0px;
+  margin-bottom: 20px;
+  box-shadow: 1px 2px 5px 2px rgba(13, 86, 155, 0.2);
+  background-color: #fff;
+}
+.nav button {
+  margin-left: 15px;
+}
+
+
+
+/* Таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+thead {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+}
+th, td {
+  padding: 8px 12px;
+  text-align: center;
+}
+tbody tr:nth-child(odd) {
+  background-color: #fbfbfb;
+}
+
+/* Кнопки внутри таблицы */
+.table-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  width: 100%;
+}
+.tableBtnDiv {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #eee;
+  border-radius: 10px;
+}
+.table-btn:hover { background-color: #bbbbcc; }
+.table-btn.delete { color: #e74c3c; }
+.table-btn.delete:hover { color: #c0392b; }
+.table-btn.edit { color: #f39c12; }
+.table-btn.edit:hover { color: #d35400; }
+th:nth-child(1), td:nth-child(1) { width: 10%; }   /* Фото */
+th:nth-child(2), td:nth-child(2) { width: 24%; }  /* ФИО */
+th:nth-child(3), td:nth-child(3) { width: 24%; }  /* Статус */
+th:nth-child(4), td:nth-child(4) { width: 10%; }  /* Зарплата */
+th:nth-child(5), td:nth-child(5) { width: 18%; }  /* Дата рождения */
+th:nth-child(6), td:nth-child(6) { width: 14%; }  /* Действия */
+#deptSelect { padding: 5px; }
+
+/* Отделы: выравнивание */
+#departmentList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+/* Стили селекта и кнопок сохранения/отмены #3498db */
+#departmentList select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.tableBtnDiv2 {
+  margin: 0 auto;
+  margin-top: 4%;
+  width: 60%;
+  background-color: #eee;
+  border-radius: 10px;
+}
+.save-boss, .cancel-boss {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  margin-bottom: 5%;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.save-boss:hover, .cancel-boss:hover { background-color: #2980b9; }
+.boss-btn {
+  width: 100%;
+  margin-bottom: 5%;
+}
+.downloadDocBtn {
+  width: 100%;
+}
+
+
+
+
+/* ---------------- */
+/* Форма добавления */
+/* ---------------- */
+#addSection input,
+#addSection select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 1.5%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.addBtns {
+  width: 49.7%;
+}
+
+/* Custom file add button */
+#newImage {
+  display: none;
+}
+#fileButton {
+  margin-bottom: 1.5%;
+}
+.file-upload-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.file-upload-wrapper input[type="file"] {
+  display: none;
+}
+#customFileBtn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#fileName {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Submit button */
+#addBtn {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+#addBtn:hover { background-color: #2980b9; }
+
+/* Cancel button */
+#addBtnCancel { background-color: #c0392b; }
+#addBtnCancel:hover { background-color: #2980b9; }
+
+#clipboardimg { display: none; margin-bottom: 2%; }
